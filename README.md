@@ -1,7 +1,7 @@
 # Mouse Data Introduction to Computational NeuroScience Project
 
 In this proejct, we will define multiple interesting tasks to tackle using this dataset and try different data analysis and machine learning techniques to solve these tasks as well as coming up with some interesting observations about mice, how and what they see?
-Blog post for project describtion can be found [HERE]: https://medium.com/@m.maher525/understanding-a-mouse-is-like-smelling-the-color-9-fe74534f4579
+Blog post for project describtion can be found: <a href="https://medium.com/@m.maher525/understanding-a-mouse-is-like-smelling-the-color-9-fe74534f4579">HERE</a>
 
 <hr>
 
