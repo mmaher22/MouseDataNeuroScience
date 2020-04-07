@@ -52,6 +52,7 @@ def main(args):
     if args.if_histogram:
         print('compute histogram......')
         histogram,param_dict = get_histogram(args, nrof_sample)
+        print('number of histogram bins = ', args.n_bins)
     else:
         with open(os.path.join(args.resfolder, 'histogram.pkl'), 'rb') as f:
             histogram = pickle.load(f)
@@ -132,7 +133,8 @@ def get_histogram(args, nrof_sample):
     std=np.std(shortest_path[np.nonzero(np.triu(shortest_path,1))])
     param_dict['avg'] = avg
     param_dict['std'] = std
-    histogram = np.histogram(shortest_path[np.nonzero(np.triu(shortest_path,1))].astype('float64'), args.n_bins)
+    histogram = np.histogram(shortest_path[np.nonzero(np.triu(shortest_path,1))].astype('float64'), 'auto')
+    args.n_bins = len(histogram[0])
     del shortest_path
     with open(os.path.join(args.resfolder, 'histogram.pkl'), 'wb') as f:
         pickle.dump(histogram, f)
